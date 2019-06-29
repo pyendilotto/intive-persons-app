@@ -44,14 +44,8 @@ public class Main2Activity extends AppCompatActivity {
 
         getXML();
 
-
-
         //get bundle:
         Integer id = getIntent().getIntExtra("id", 0);
-
-        Log.v("ACT2", "ID: "+id);
-
-        Log.v("IMGLARGE", "URL: "+persons.get(id).getLarge());
 
         txtfirstname.setText(persons.get(id).getFirstname());
         txtlastname.setText(persons.get(id).getLastname());

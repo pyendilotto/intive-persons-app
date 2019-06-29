@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         }//if is online
         else
         {
-            Log.v("PIERO","NO HAY CONEXION. NOTIFICAR AL PRESENTER");
+            Log.v("PIERO","NO HAY CONEXION.");
         }
 
     }

@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/imglarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="10dp"
@@ -21,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@mipmap/loading" />
 
     <TextView
         android:id="@+id/txt_email"
@@ -33,6 +33,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="TextView"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_lastname" />
@@ -47,6 +48,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="TextView"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imglarge" />
@@ -61,6 +63,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="TextView"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_username" />
@@ -75,6 +78,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="TextView"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_firstname" />

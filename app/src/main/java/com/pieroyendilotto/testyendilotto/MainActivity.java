@@ -3,19 +3,14 @@ package com.pieroyendilotto.testyendilotto;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.os.Handler;
 import android.util.Log;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         getXML();
 
@@ -138,6 +132,12 @@ public class MainActivity extends AppCompatActivity {
         else
         {
             Log.v("PIERO","NO HAY CONEXION.");
+
+            Toast toast1 = Toast.makeText(getApplicationContext(),
+                    getString(R.string.no_connection), Toast.LENGTH_LONG);
+
+            toast1.show();
+
         }
 
     }
@@ -173,34 +173,9 @@ public class MainActivity extends AppCompatActivity {
                                            );
 
 
-
-                /*person.setThumbnail(jObj.getJSONArray("results").getJSONObject(0).getJSONObject("picture").getString("thumbnail"));
-                person.setLarge(jObj.getJSONArray("results").getJSONObject(0).getJSONObject("picture").getString("large"));
-                person.setUsername(jObj.getJSONArray("results").getJSONObject(0).getJSONObject("login").getString("username"));
-                person.setFirstname(jObj.getJSONArray("results").getJSONObject(0).getJSONObject("name").getString("first"));
-                person.setLastname(jObj.getJSONArray("results").getJSONObject(0).getJSONObject("name").getString("last"));
-                person.setEmail(jObj.getJSONArray("results").getJSONObject(0).getString("email"));
-                */
                 persons.add(person);
 
-                    /*
-                    Log.v("Thumb", person.getThumbnail());
-                    Log.v("Large", person.getLarge());
-                    Log.v("Username", person.getUsername());
-                    Log.v("Firstname", person.getFirstname());
-                    Log.v("Lastname", person.getLastname());
-                    Log.v("Email", person.getEmail());
-
-                    */
             }
-
-            Log.v("ACTIVITY", persons.get(0).getThumbnail());
-            Log.v("PIERO2Large", persons.get(0).getLarge());
-            Log.v("PIERO2Username", persons.get(0).getUsername());
-            Log.v("PIERO2Firstname", persons.get(0).getFirstname());
-            Log.v("PIERO2Lastname", persons.get(0).getLastname());
-            Log.v("PIERO2Email", persons.get(0).getEmail());
-            Log.v("PIERO2", "VALOR: "+String.valueOf(persons.size()));
 
 
         } catch (JSONException e) {

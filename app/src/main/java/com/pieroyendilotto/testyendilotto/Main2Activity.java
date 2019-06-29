@@ -33,12 +33,11 @@ public class Main2Activity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         getXML();
 
         //get bundle:
         Integer id = getIntent().getIntExtra("id", 0);
-
+        //set in fields:
         txtfirstname.setText(persons.get(id).getFirstname());
         txtlastname.setText(persons.get(id).getLastname());
         txtusername.setText(persons.get(id).getUsername());

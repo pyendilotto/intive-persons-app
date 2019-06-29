@@ -16,11 +16,6 @@ import java.util.ArrayList;
 
 public class PersonAdapter extends BaseAdapter {
 
-    private String str_url;
-    private String str_username;
-    private String str_firstname;
-    private String str_lastname;
-    private String str_email;
 
     static class ViewHolder {
 
@@ -119,17 +114,8 @@ public class PersonAdapter extends BaseAdapter {
         holder.lastname.setText(data.get(position).getLastname());
         holder.email.setText(data.get(position).getEmail());
 
-        //setting values in a future bundle:
-        str_firstname = data.get(position).getFirstname();
-        str_lastname = data.get(position).getLastname();
-        str_username = data.get(position).getUsername();
-        str_email = data.get(position).getEmail();
-        str_url = data.get(position).getLarge();
-
-
         //SETEO EL ICONO EN BASE A LA URL TRAIDA:
         new DownloadImageTask(holder.icono).execute(data.get(position).getThumbnail());
-
 
         holder.icono.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,7 +129,6 @@ public class PersonAdapter extends BaseAdapter {
                 //ABRO LA SEGUNDA ACTIVIDAD:
 
                 Context context = v.getContext();
-
                 Intent intent = new Intent(context, Main2Activity.class);
                 intent.putExtra("id", renglonId);
                 context.startActivity(intent);
